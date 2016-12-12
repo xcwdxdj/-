@@ -1,0 +1,87 @@
+#橙书Algorithms(Fourth Edition)
+
+###1.1基础编程模型
+
+####练习
+1.1.1 
+	a. 7
+	b.200.0000002
+	c.true
+1.1.2
+	a.double   1.618
+	b.double   10.0
+	c.boolean  true
+	d.string   "123"
+1.1.3
+	```
+	import java.util.Arrays;
+	public class 3IsEqual
+	{
+		public static int IsEqual(int num1,int num2)
+		{
+			if(num1 = num2) return 1;
+			else return 0;
+		}
+		public static void main(void)
+		{
+			int c =3;
+			int []a;
+			int i;
+			for(i=0; i<c; i++)
+			{
+				a[i]=StdIn.readInt();
+			}
+			if(IsEqual(a[0],a[1]) && IsEqual(a[1],a[2]))
+			{
+				StadOut.println("equal");
+			}
+			else StdOut.println("not equal");
+		}
+	}
+	```
+1.1.4
+	a.then
+	b.if后的条件要用（）括住
+	c.没问题
+	d.`c=0` `b=0`这两句代码后面没有加`;`
+1.1.5
+	```
+	public class doubl0_1
+	{
+		public static boolean double01(double num)
+		{
+			if(num>0 && num<1) return true;
+			else return false;
+		}
+		public static void main(double num1,double num2)
+		{
+			double n1 = In.readDoubles(num1);
+			double n2 = In.readDoubles(num2);
+			if(double01(n1) && double01(n2))
+			{
+				StdOut.println("true");
+			}
+			else StdOut.println("false");
+		}
+	}
+	```
+1.1.6
+	0	
+	1	
+	1	
+	2	
+	3	
+	5	
+	8	
+	13
+	21	
+	34
+	55
+	89
+	144
+	233
+	377
+	600
+	——————————————————————————————————————————————————————————————12.12/18：01
+1.1.7
+##明天继续
