@@ -224,4 +224,19 @@ public class Exchangemn {
 
 第二个是，Java的函数居然可以返回数组，看来在Java的世界里，遵循着一切皆可为class的思想啊，一块一块拼积木
 1.1.16
-	
+```
+public class Exchangemn {
+	public static String exR1(int n){
+		if(n<=0) return "";
+		return exR1(n-3) + n + exR1(n-2) + n;
+	}
+
+
+	public static void main(String[] args) {
+		System.out.println(exR1(6));
+		//311361142246
+    }
+}
+```
+//这个题讲道理毫不能理解它想要一种怎样的方法呢？
+
