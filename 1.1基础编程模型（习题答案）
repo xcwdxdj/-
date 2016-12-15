@@ -193,4 +193,35 @@ public class Exchangemn {
 	}
 ```
 1.1.15
+```
+	public class Exchangemn {
+
+		public static int[] CoutArrMEle(int[] a,int M){
+			int n = a.length;
+			int[] m = new int[M];
+			int mid;
+			for(int i=0; i<n; i++){
+				mid = a[i];
+				if(mid<M){
+					m[mid]++;
+				}
+			}
+			return m;
+		}
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			int[] arg ={1,1,0,3,5,5,5,7,8,9};
+			int X = 8;
+			int[] ms = new int[X];
+			ms = CoutArrMEle(arg,X);
+			for(int i=0; i<X; i++)
+				System.out.println(ms[i]);
+	    }
+	}
+```
+这个故事告诉我们，Java的数组可以直接调用其长度 比如数组叫 a ，那 a.length就是数组长度；
+
+第二个是，Java的函数居然可以返回数组，看来在Java的世界里，遵循着一切皆可为class的思想啊，一块一块拼积木
+1.1.16
 	
