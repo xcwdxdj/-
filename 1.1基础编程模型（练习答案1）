@@ -239,4 +239,94 @@ public class Exchangemn {
 }
 ```
 //这个题讲道理毫不能理解它想要一种怎样的方法呢？
+1.1.17
+	//这段代码的基础情况永远不会被访问，调用exR2(3)会产生exR2(0)、exR2(-3)和exR2(-6)，循环往复直到发生StackOverFlowError.
+	//做了测试果然出错了，我大概理解了一下就是说它在给S参数提供空间的时候发现是歌无底洞，更不用说进行下一步n<=0的判断了
+	
+1.1.18
 
+public class Exchangemn {
+	public static int mystery(int a,int b){
+		if(b == 0)		return 0;
+		if(b%2 == 0)	return mystery(a+a,b/2);
+		return	mystery(a+a,b/2)+a;
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println(mystery(2, 25));
+		System.out.println(mystery(3, 11));
+    }
+}
+//result:
+50
+33
+
+//after changing
+the code:
+public class Exchangemn {
+	public static int mystery(int a,int b){
+		if(b == 0)		return 1;
+		if(b%2 == 0)	return mystery(a*a,b/2);
+		return	mystery(a*a,b/2)+a;
+	}
+
+
+	public static void main(String[] args) {
+
+		System.out.println(mystery(2, 25));
+		System.out.println(mystery(3, 11));
+    }
+}
+//the results:
+65795
+6574
+
+1.1.19
+//经过实验，的确程序运行不到十几秒，出结果的速度肉眼可见的慢了下来，
+//the result:
+0 0
+1 1
+2 1
+3 2
+4 3
+5 5
+6 8
+7 13
+8 21
+9 34
+10 55
+11 89
+12 144
+13 233
+14 377
+15 610
+16 987
+17 1597
+18 2584
+19 4181
+20 6765
+21 10946
+22 17711
+23 28657
+24 46368
+25 75025
+26 121393
+27 196418
+28 317811
+29 514229
+30 832040
+31 1346269
+32 2178309
+33 3524578
+34 5702887
+35 9227465
+36 14930352
+37 24157817
+38 39088169
+39 63245986
+40 102334155
+41 165580141
+42 267914296
+...
+//到N=42时速度肉眼可见的就慢了，非常明显，这个代码的效率并不高
