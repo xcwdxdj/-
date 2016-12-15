@@ -82,19 +82,76 @@
 	233
 	377
 	600
-	——————————————————————————————————————————————————————————————12.12/18：01
+	——————————————————————————————————————————————————————————————12.12/18：01以上为手撸结果，下为程序结果
+	0
+	1
+	1
+	2
+	3
+	5
+	8
+	13
+	21
+	34
+	55
+	89
+	144
+	233
+	377
+	610
+	（这个故事告诉我们一定要学会用计算机，省时省力）
+	
 1.1.7
 	a. 0.00009
 	b. 499500
 	c. 10000
+	（这一题是用c语言撸出来的，告诉我们一个道理就是什么语言都行的）	
 1.1.8
 	a. b
 	b. 197
 	c. e
+	（这个故事告诉我们关于Java的输出，我们还知道的太少）	
 1.1.9
 	String s = "";
 	for(int n=N; n>0; n/=2)
 		s = (n%2) + s;
+————————————————————————————————————讲道理不能理解这一题，于是写了测试函数
+public class Exchangemn {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s = "";
+		System.out.println(s);		//测试s是个什么		
+		for(int n=199; n>0; n/=2){
+			System.out.println(n);	//测试每一次的n是什么			
+			s = (n%2) + s;
+			System.out.println(s);	//测试每次的s变化		
+}	
+
+		System.out.println(s);		//s的结果
+    }
+}
+//测试结果
+
+199
+1
+99
+11
+49
+111
+24
+0111
+12
+00111
+6
+000111
+3
+1000111
+1
+11000111
+11000111
+——————————————————————————测试结束，说明Java的输出字符串输出有种神奇的特性，这是较C语言不同的地方，比较神奇
 1.1.10
         它没有用new为a[]分配内存，这段代码会产生一个variable a might not have been initialized的错误编译。
 	
@@ -111,7 +168,29 @@
 		 7
 		 8
 		 9
-1.1.13
-	int main(void){
-		
+1.1.13讲道理我觉得翻译真心有问题，M行N列的二维数组是怎么回事。
+1.1.14
+```
+	import java.util.Scanner;
+
+	public class Exchangemn {
+		public static int Minlog2n(int N){
+			int c = 0;
+			while(N>0){
+				N = N/2;
+				if(N>0)
+					c++;
+			}
+			return c;
+		}
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			Scanner in = new Scanner(System.in);
+			int N = in.nextInt();
+			System.out.println(Minlog2n(N));
+	    }
 	}
+```
+1.1.15
+	
