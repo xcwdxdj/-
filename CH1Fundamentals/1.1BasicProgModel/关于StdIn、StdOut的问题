@@ -1,0 +1,32 @@
+//不能像树上教材上可以直接使用StdIn,StdOut的问题也困扰了我一段时间
+//后来我在电子教材的网页上找到了答案（这个故事告诉我们好好学英语，书到用时方恨少）
+//@http://algs4.cs.princeton.edu/code/
+//我把重点复制下来了，是原文，不过下面会结合我的经验写中文解析
+//Installing the textbook libraries. To use the textbook libraries, download algs4.jar and it to the classpath.
+
+Do not unjar it. Here is how to accomplish that in a variety of environments:
+
+Mac OS X (automatic). The Mac OS X installer downloads algs4.jar to the /Users/username/algs4 folder; adds it to the DrJava classpath; and provides the wrapper scripts javac-algs4 and java-algs4, which classpath in algs4.jar, for use in the Terminal.
+
+Windows (automatic). The Windows installer downloads algs4.jar to the C:\Users\username\algs4 folder; adds it the DrJava classpath; and provides the wrapper scripts javac-algs4 and java-algs4, which classpath in algs4.jar, for use from the Command Prompt.
+
+Windows Command Prompt (manual). Download algs4.jar to a folder, say C:\Users\username\algs4. Next, add algs4.jar to the CLASSPATH environment variable.
+
+Windows 7: Start -> Computer -> System Properties -> Advanced system settings -> Environment Variables -> User variables -> CLASSPATH.
+
+Vista: Start -> My Computer -> Properties -> Advanced -> Environment Variables -> User variables -> CLASSPATH.
+
+Windows XP: Start -> Control Panel -> System -> Advanced -> Environment Variables -> User variables -> CLASSPATH.
+
+//我的理解，这里我默认你已经安装好了Java的环境和Eclipse，已经建立了一个工程开始编程，
+//（如果不会请看浙大的公开课，零基础学习Java语言的“1.1 第一个Java程序”小节
+//网址http://www.icourse163.org/learn/ZJU-1001541001?tid=1001617002#/learn/announce）
+
+//1.然后在我给的最上方的电子教材网页中下载“ algs4.jar”，下载好了放在你自己知道的电脑的哪儿就行
+
+//2.然后右击你建立的工程中的class，选择 "build path">"configure build path">"libraries">"add external JARS">找到刚才下载的algs4选“打开">"OK"
+
+//3.就可以用了，使用方法：现在屏幕上输入"Std"(或者不齐全都行)，然后按 "alt"+"/"的组合键,会出来一个条目让你选择补齐你要输入的东西，哎呀，我还不会在github上插图
+//  这样子，如果不知道怎么使用，就把我上面说的浙大的公开课的1.2节也好好看了，基本就没问题
+
+如果还有问题可以留言给我，或者加我微信：xcwdxdj    备注；github 就可以咯~
